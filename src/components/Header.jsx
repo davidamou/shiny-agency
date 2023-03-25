@@ -52,9 +52,9 @@ function Header() {
                 <h1>Shiny</h1>
             </Title>
             <Nav>
-                <NavLink to={'#'}>Home</NavLink>
+                <NavLink to={'/'}>Home</NavLink>
                 <NavLink to={'#'}>Profiles</NavLink>
-                <Button to={'/shiny'}>Take the test</Button>
+                <Button to={'/shiny/1'}>Take the test</Button>
             </Nav>
         </Header>
     );

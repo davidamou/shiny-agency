@@ -5,15 +5,17 @@ import reportWebVitals from "./reportWebVitals"
 import Home from "./pages/Home"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Shiny from "./pages/Shiny"
+import Error from "./pages/Error"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home name={'Ann'} />,
+    element: <Home name={"Ann"} />
   },
   {
-    path: "/shiny",
-    element: <Shiny/>,
+    path: "/shiny/:questionNumber",
+    element: <Shiny />,
+    errorElement: <Error />
   }
 ])
 
