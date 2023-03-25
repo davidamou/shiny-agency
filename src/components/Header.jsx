@@ -15,9 +15,11 @@ function Header() {
         padding: 0;
       }
     `
-    const Title = styled.div`
+    const Title = styled(Link)`
       display: flex;
       align-items: center;
+      text-decoration: none;
+      color: ${color.text};
     `
     const Logo = styled.img`
       margin-right: 12px;
@@ -35,6 +37,7 @@ function Header() {
         display: none;
       }
     `
+
     const NavLink = styled(Link)`
       margin-left: 1em;
       margin-right: 1em;
@@ -44,14 +47,14 @@ function Header() {
 
     return (
         <Header>
-            <Title>
+            <Title to={'/'}>
                 <Logo src={logo}/>
                 <h1>Shiny</h1>
             </Title>
             <Nav>
-                <NavLink to={'/'}>Accueil</NavLink>
-                <NavLink to={'/'}>Profils</NavLink>
-                <Button to={'/shiny'}>Faire le test</Button>
+                <NavLink to={'#'}>Home</NavLink>
+                <NavLink to={'#'}>Profiles</NavLink>
+                <Button to={'/shiny'}>Take the test</Button>
             </Nav>
         </Header>
     );

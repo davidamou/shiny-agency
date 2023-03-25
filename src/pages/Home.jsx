@@ -58,10 +58,9 @@ function Home() {
             <Section>
                 <TextContainer>
                     <Text>
-                        Repérez vos besoins,
-                        on s’occupe du reste, avec les meilleurs talents
+                        Identify your needs, we take care of the rest, with the best talents.
                     </Text>
-                    <Button to={'/shiny'}>Faire le test</Button>
+                    <Button to={'/shiny'}>Take the test</Button>
                 </TextContainer>
                 <Space/>
                 <Image src={question}/>
