@@ -1,13 +1,13 @@
-import React from "react"
 import Header from "../components/Header"
 import styled from "styled-components"
-import { color } from "../style/color"
 import question from "../assets/questions.svg"
 import Button from "../style/Button"
+import React from "react"
+import { Color } from "../components/ThemeMode"
 
 const Section = styled.section`
   margin: 1em 2em 0 2em;
-  background-color: ${color.canvasColor};
+  background-color: ${Color.canvasColor};
   padding: 3em 8em 3em 8em;
   display: flex;
   justify-content: space-between;
@@ -32,24 +32,25 @@ const Space = styled.div`
 
 const Text = styled.h2`
   font-size: 3rem;
-  color: ${color.text};
   @media (max-width: 600px) {
     font-size: 2rem;
   }
 `
 const TextContainer = styled.div`
-  width: 50%;
+  width: 49%;
   @media (max-width: 1080px) {
     width: 100%;
   }
 `
 
 const Image = styled.img`
-  width: 50%;
+  width: 51%;
   @media (max-width: 1080px) {
     width: 100%;
   }
 `
+
+document.title = 'Home';
 
 function Home() {
   return (

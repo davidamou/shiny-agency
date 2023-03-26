@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import Header from "../components/Header"
 import styled, { keyframes } from "styled-components"
-import { color } from "../style/color"
 import { Link, useParams } from "react-router-dom"
+import { Color } from "../components/ThemeMode"
 
 const Section = styled.section`
   display: flex;
@@ -21,7 +21,7 @@ const Loader = styled.div`
   width: 0;
   height: 0;
   padding: 16px;
-  border: 4px solid ${color.primary};
+  border: 4px solid ${Color.primary};
   animation: ${rotate} 1s infinite linear;
   border-bottom-color: transparent;
   border-radius: 50%;
@@ -35,11 +35,12 @@ const QuestionContent = styled.p`
   justify-content: center;
   padding: 16px;
 `
-
 const Space = styled.span`
   margin-left: 40px;
   margin-right: 40px;
 `
+
+document.title = 'Shiny';
 
 function Shiny() {
   const {questionNumber} = useParams()

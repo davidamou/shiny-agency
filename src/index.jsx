@@ -1,28 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import "./style/index.css"
 import reportWebVitals from "./reportWebVitals"
-import Home from "./pages/Home"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Shiny from "./pages/Shiny"
-import Error from "./pages/Error"
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home name={"Ann"} />
-  },
-  {
-    path: "/shiny/:questionNumber",
-    element: <Shiny />,
-    errorElement: <Error />
-  }
-])
+import App from "./pages/App"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <App/>
   </React.StrictMode>
 )
 
